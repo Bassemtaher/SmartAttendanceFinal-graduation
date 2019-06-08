@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://C:\Users\bassem\Downloads\SmartAttendanceFinal-master\SmartAttendanceFinal-master\SmartAttendance22.iml" filepath="C:\Users\bassem\Downloads\SmartAttendanceFinal-master\SmartAttendanceFinal-master\SmartAttendance22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmartAttendanceFinal-master.iml" filepath="$PROJECT_DIR$/SmartAttendanceFinal-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\bassem\Downloads\SmartAttendanceFinal-master\SmartAttendanceFinal-master\app\app.iml" filepath="C:\Users\bassem\Downloads\SmartAttendanceFinal-master\SmartAttendanceFinal-master\app\app.iml" />
+    </modules>
+  </component>
+</project>

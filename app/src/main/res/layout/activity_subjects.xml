@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowallData">
+
+
+
+   <Button
+       android:id="@+id/Showing"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginEnd="13dp"
+       android:layout_marginTop="31dp"
+       android:text="Show"
+       app:layout_constraintEnd_toEndOf="@+id/Month"
+       app:layout_constraintTop_toBottomOf="@+id/Month" />
+
+   <EditText
+       android:id="@+id/Day"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="538dp"
+       android:layout_marginEnd="4dp"
+       android:clickable="false"
+       android:hint="enter the day"
+       android:inputType="none|number"
+       app:layout_constraintBottom_toTopOf="@+id/gridview"
+       app:layout_constraintEnd_toStartOf="@+id/Month"
+       app:layout_constraintHorizontal_chainStyle="spread_inside"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <EditText
+       android:id="@+id/Month"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:clickable="false"
+       android:hint="enter the month"
+       android:inputType="number"
+       app:layout_constraintEnd_toStartOf="@+id/Year"
+       app:layout_constraintStart_toEndOf="@+id/Day"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <EditText
+       android:id="@+id/Year"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:clickable="false"
+       android:hint="enter the year"
+       android:inputType="number"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@+id/Month"
+       app:layout_constraintTop_toTopOf="parent" />
+
+
+   <GridView
+       android:id="@+id/gridview"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:layout_marginBottom="7dp"
+       android:layout_marginEnd="8dp"
+       android:layout_marginStart="8dp"
+       android:numColumns="2"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/Day"></GridView>
+
+</android.support.constraint.ConstraintLayout>

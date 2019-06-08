@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Smart Attendance</string>
+    <string-array name="subjects">
+        <item>Choose The Subject</item>
+        <item>Security</item>
+        <item>Neural</item>
+        <item>Theory</item>
+    </string-array>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bassem.bassem.smartattendance">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="com.android.hardware.Camera.focus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/modern"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.journeyapps.barcodescanner.CaptureActivity" />
+        android:screenOrientation="portrait"
+        tools:replace="screenOrientation">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".scanActivity" />
+        <activity android:name=".Registeration" />
+        <activity android:name=".DrLogin" />
+        <activity android:name=".ShowallData" />
+        <activity android:name=".showStudent" />
+        <activity android:name=".QRGeneration" />
+        <activity android:name=".studentService" />
+        <activity android:name=".CreateDrs" />
+        <activity android:name=".DrForm" />
+        <activity android:name=".ServiceLogin" />
+        <activity android:name=".Counting" />
+        <activity android:name=".CreatingServ"></activity>
+    </application>
+
+</manifest>

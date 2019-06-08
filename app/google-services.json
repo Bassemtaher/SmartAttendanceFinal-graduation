@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1041428759269",
+    "firebase_url": "https://smartattendance-ec2d5.firebaseio.com",
+    "project_id": "smartattendance-ec2d5",
+    "storage_bucket": "smartattendance-ec2d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041428759269:android:1868b7c5d6cf2eee",
+        "android_client_info": {
+          "package_name": "com.bassem.bassem.smartattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041428759269-36thdi59dc11oodegisqtdf0dv4rqsru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpw1OFQqYLbc64VMQfHNqyuq4rvUBIp-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041428759269-36thdi59dc11oodegisqtdf0dv4rqsru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

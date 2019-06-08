@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".scanActivity">
+    <Spinner
+        android:id="@+id/spinSubject"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:entries="@array/subjects" />
+
+    <ImageView
+        android:id="@+id/imsc"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/scB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan" />
+
+    <Button
+        android:id="@+id/shB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Data" />
+
+
+</LinearLayout>
