@@ -27,7 +27,7 @@ public class scanActivity extends AppCompatActivity implements AddInterface {
     Button scan,show;
     ImageView imageView;
     Spinner spinner;
-    String subject,code;
+    String subject,code,subNo;
     private Calendar calendar= Calendar.getInstance();
     private String Date= DateFormat.getDateInstance().format(calendar.getTime());
 
@@ -53,16 +53,20 @@ public class scanActivity extends AppCompatActivity implements AddInterface {
                 {
                     case "Security":
                         code = "securityAttend001";
+                        subNo="0";
                         break;
 
                     case "Neural":
                         code = "neuralAttend010";
+                        subNo="1";
                         break;
+
 
 
                     case "Theory":
 
                         code = "theoryAttend011";
+                        subNo="2";
                         break;
                 }
 
@@ -114,7 +118,7 @@ show.setOnClickListener(new View.OnClickListener() {
                 Log.i("dataa","on data change"+(text));
 
 if(result.getContents().equals(text)) {
-    HelperMethods.pushInFireBase("Subject", "0", "date", "5-5-2019", "emails", HelperMethods.currentSubject, scanActivity.this, "plz wait", "loading", "0", "date", currentDate, "emails", id);
+    HelperMethods.pushInFireBase("Subject",subNo, "date", "5-5-2019", "emails", HelperMethods.currentSubject, scanActivity.this, "plz wait", "loading", "0", "date", currentDate, "emails", id);
 }
 
             }

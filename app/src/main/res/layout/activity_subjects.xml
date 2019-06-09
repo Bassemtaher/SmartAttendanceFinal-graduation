@@ -4,30 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorwhite"
     tools:context=".ShowallData">
-
 
 
    <Button
        android:id="@+id/Showing"
-       android:layout_width="wrap_content"
+       android:layout_width="0dp"
        android:layout_height="wrap_content"
-       android:layout_marginEnd="13dp"
-       android:layout_marginTop="31dp"
+       android:layout_marginBottom="254dp"
+       android:background="@color/colorPrimaryDark"
+       android:fontFamily="@font/arkhip_font"
        android:text="Show"
-       app:layout_constraintEnd_toEndOf="@+id/Month"
-       app:layout_constraintTop_toBottomOf="@+id/Month" />
+       android:textColor="@android:color/white"
+       app:layout_constraintBottom_toTopOf="@+id/gridview"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/Day" />
 
    <EditText
        android:id="@+id/Day"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginBottom="538dp"
-       android:layout_marginEnd="4dp"
+       android:layout_marginBottom="145dp"
+       android:layout_marginTop="91dp"
+
        android:clickable="false"
        android:hint="enter the day"
        android:inputType="none|number"
-       app:layout_constraintBottom_toTopOf="@+id/gridview"
+       android:textColorHint="@android:color/background_dark"
+       app:layout_constraintBottom_toTopOf="@+id/Showing"
        app:layout_constraintEnd_toStartOf="@+id/Month"
        app:layout_constraintHorizontal_chainStyle="spread_inside"
        app:layout_constraintStart_toStartOf="parent"
@@ -37,36 +43,43 @@
        android:id="@+id/Month"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:layout_marginEnd="2dp"
+
+
        android:clickable="false"
        android:hint="enter the month"
        android:inputType="number"
+       android:textColorHint="@android:color/background_dark"
+       app:layout_constraintBaseline_toBaselineOf="@+id/Day"
        app:layout_constraintEnd_toStartOf="@+id/Year"
-       app:layout_constraintStart_toEndOf="@+id/Day"
-       app:layout_constraintTop_toTopOf="parent" />
+       app:layout_constraintStart_toEndOf="@+id/Day" />
 
    <EditText
        android:id="@+id/Year"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:layout_marginEnd="7dp"
        android:clickable="false"
+
        android:hint="enter the year"
        android:inputType="number"
+       android:textColorHint="@android:color/background_dark"
+       app:layout_constraintBaseline_toBaselineOf="@+id/Month"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintStart_toEndOf="@+id/Month"
-       app:layout_constraintTop_toTopOf="parent" />
+       app:layout_constraintStart_toEndOf="@+id/Month" />
 
 
    <GridView
        android:id="@+id/gridview"
        android:layout_width="0dp"
        android:layout_height="0dp"
-       android:layout_marginBottom="7dp"
+       android:layout_marginBottom="5dp"
        android:layout_marginEnd="8dp"
        android:layout_marginStart="8dp"
        android:numColumns="2"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/Day"></GridView>
+       app:layout_constraintTop_toBottomOf="@+id/Showing"></GridView>
 
 </android.support.constraint.ConstraintLayout>

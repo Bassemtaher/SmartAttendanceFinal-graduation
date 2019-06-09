@@ -20,6 +20,9 @@
 
     <Button
         android:id="@+id/GenerB"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorwhite"
+        android:fontFamily="@font/arkhip_font"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="generate" />

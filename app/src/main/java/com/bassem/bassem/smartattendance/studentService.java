@@ -39,7 +39,6 @@ Button sh,cr,crserv;
     {
         Intent intent=new Intent(studentService.this,ShowallData.class);
         startActivity(intent);
-        finish();
 
     }
     public void create()

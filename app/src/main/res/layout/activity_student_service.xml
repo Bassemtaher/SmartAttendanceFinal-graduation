@@ -4,40 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/uniii"
     tools:context="com.bassem.bassem.smartattendance.studentService">
 
     <Button
         android:id="@+id/showst"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginBottom="36dp"
+        android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/arkhip_font"
         android:text="SHOW STUDENTS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/colorwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/creatingdrs"
+        app:layout_constraintStart_toStartOf="@+id/creatingdrs"
+        app:layout_constraintTop_toBottomOf="@+id/creatingdrs" />
 
     <Button
 
         android:id="@+id/creatingdrs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="404dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/arkhip_font"
         android:text="CREATE DOCTORS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/colorwhite"
+        app:layout_constraintBottom_toTopOf="@+id/showst"
+        app:layout_constraintEnd_toEndOf="@+id/creatingserv"
+        app:layout_constraintStart_toStartOf="@+id/creatingserv"
+        app:layout_constraintTop_toBottomOf="@+id/creatingserv" />
 
     <Button
 
         android:id="@+id/creatingserv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginTop="382dp"
+        android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/arkhip_font"
         android:text="CREATE SERVICE"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/colorwhite"
+        app:layout_constraintBottom_toTopOf="@+id/creatingdrs"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

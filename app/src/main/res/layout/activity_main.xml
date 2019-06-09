@@ -7,32 +7,34 @@
     android:id="@+id/rootLayout"
     android:orientation="vertical"
     tools:context="com.bassem.bassem.smartattendance.MainActivity">
+
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:fontFamily="@font/arkhip_font"
+
             android:text="S M A R T"
-            android:textSize="36sp"
             android:textAlignment="center"
-            android:fontFamily="@font/arkhip_font"
-
             android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="36sp" />
 
         <TextView
-            android:text="Attendance"
-            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/arkhip_font"
+            android:text="Attendance"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
