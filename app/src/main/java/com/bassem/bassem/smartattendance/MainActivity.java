@@ -71,14 +71,12 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent=new Intent(MainActivity.this,DrLogin  .class);
         startActivity(intent);
-        finish();
 
     }
     public void scan()
     {
         Intent intent=new Intent(MainActivity.this,ServiceLogin.class);
         startActivity(intent);
-        finish();
 
 
     }

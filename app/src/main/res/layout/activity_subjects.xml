@@ -10,12 +10,13 @@
    <Spinner
        android:id="@+id/spinAllData"
        android:layout_width="0dp"
-       android:layout_height="0dp"
+       android:layout_height="29dp"
 
-       android:layout_marginBottom="51dp"
+       android:layout_marginBottom="52dp"
        android:entries="@array/subjects"
        app:layout_constraintBottom_toTopOf="@+id/Day"
        app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +25,7 @@
        android:id="@+id/Showing"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
-       android:layout_marginBottom="254dp"
+       android:layout_marginBottom="11dp"
        android:background="@color/colorPrimaryDark"
        android:fontFamily="@font/arkhip_font"
        android:text="Show"
@@ -38,14 +39,12 @@
        android:id="@+id/Day"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginBottom="455dp"
-       android:layout_marginTop="91dp"
 
        android:clickable="false"
        android:hint="enter the day"
        android:inputType="none|number"
        android:textColorHint="@android:color/background_dark"
-       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/Showing"
        app:layout_constraintEnd_toStartOf="@+id/Month"
        app:layout_constraintHorizontal_chainStyle="spread_inside"
        app:layout_constraintStart_toStartOf="parent"
@@ -55,9 +54,9 @@
        android:id="@+id/Month"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginEnd="2dp"
 
 
+       android:layout_marginEnd="1dp"
        android:clickable="false"
        android:hint="enter the month"
        android:inputType="number"
@@ -70,9 +69,9 @@
        android:id="@+id/Year"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginEnd="7dp"
-       android:clickable="false"
+       android:layout_marginEnd="6dp"
 
+       android:clickable="false"
        android:hint="enter the year"
        android:inputType="number"
        android:textColorHint="@android:color/background_dark"

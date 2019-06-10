@@ -141,6 +141,7 @@ public class Registeration extends Activity implements AddInterface {
             Toast.makeText(this, "registered", Toast.LENGTH_SHORT).show();
             Intent i=new Intent(Registeration.this,scanActivity.class);
             startActivity(i);
+            finish();
         }
         else
         {
