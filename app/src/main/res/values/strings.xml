@@ -6,4 +6,9 @@
         <item>Neural</item>
         <item>Theory</item>
     </string-array>
+
+
+    <string name="Security">Security</string>
+    <string name="Neural">Neural</string>
+    <string name="Theory">Theory</string>
 </resources>

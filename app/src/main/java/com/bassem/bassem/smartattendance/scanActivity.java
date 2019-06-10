@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -28,8 +30,7 @@ public class scanActivity extends AppCompatActivity implements AddInterface {
     ImageView imageView;
     Spinner spinner;
     String subject,code,subNo;
-    private Calendar calendar= Calendar.getInstance();
-    private String Date= DateFormat.getDateInstance().format(calendar.getTime());
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class scanActivity extends AppCompatActivity implements AddInterface {
         scan = findViewById(R.id.scB);
         show = findViewById(R.id.shB);
         spinner=findViewById(R.id.spinSubject);
+
 
 
         imageView = findViewById(R.id.imsc);
@@ -69,6 +71,7 @@ public class scanActivity extends AppCompatActivity implements AddInterface {
                         subNo="2";
                         break;
                 }
+
 
 
                 IntentIntegrator integrator = new IntentIntegrator(scanActivity.this);
@@ -118,7 +121,7 @@ show.setOnClickListener(new View.OnClickListener() {
                 Log.i("dataa","on data change"+(text));
 
 if(result.getContents().equals(text)) {
-    HelperMethods.pushInFireBase("Subject",subNo, "date", "5-5-2019", "emails", HelperMethods.currentSubject, scanActivity.this, "plz wait", "loading", "0", "date", currentDate, "emails", id);
+    HelperMethods.pushInFireBase("Subject",subNo, "date", "5-5-2019", "emails", HelperMethods.currentSubject, scanActivity.this, "plz wait", "loading", subNo, "date", currentDate, "emails", id);
 }
 
             }
@@ -146,4 +149,9 @@ if(result.getContents().equals(text)) {
     public void updateUI(DatabaseError databaseError) {
 
     }
+
+
+
+
+
 }

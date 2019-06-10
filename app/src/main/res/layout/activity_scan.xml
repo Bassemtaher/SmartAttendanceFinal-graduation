@@ -13,6 +13,7 @@
 
         android:entries="@array/subjects" />
 
+
     <ImageView
         android:id="@+id/imsc"
         android:layout_width="match_parent"

@@ -36,7 +36,7 @@
         android:layout_width="167dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="32dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/arkhip_font"
         android:text="COUNTER"

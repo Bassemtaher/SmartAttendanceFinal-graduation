@@ -5,6 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bassem.bassem.smartattendance.Counting">
+    <Spinner
+        android:id="@+id/spinCounting"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:entries="@array/subjects" />
 
     <Button
         android:id="@+id/Showno"

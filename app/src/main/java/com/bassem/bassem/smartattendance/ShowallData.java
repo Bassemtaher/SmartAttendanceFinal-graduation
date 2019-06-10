@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bassem.bassem.smartattendance.Model.GetDataInterface;
@@ -22,6 +23,8 @@ GridView gridView;
     Button show;
     String r;
     EditText textday,textmonth,textyear;
+    Spinner spinner;
+    String subject,subNo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +34,30 @@ GridView gridView;
         textday=findViewById(R.id.Day);
         textmonth=findViewById(R.id.Month);
         textyear=findViewById(R.id.Year);
+        spinner=findViewById(R.id.spinAllData);
+
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                subject=spinner.getSelectedItem().toString();
+
+                switch (subject)
+                {
+                    case "Security":
+                        subNo="0";
+                        break;
+
+                    case "Neural":
+                        subNo="1";
+                        break;
+
+
+
+                    case "Theory":
+
+                        subNo="2";
+                        break;
+                }
 
                 String d,m,y;
                 d=textday.getText().toString();
@@ -42,7 +66,7 @@ GridView gridView;
                 String dates=d+"-"+m+"-"+y;
 
 
-                HelperMethods.getData(ShowallData.this,"Subject","0","date",dates,"emails","please wait","Loading");
+                HelperMethods.getData(ShowallData.this,"Subject",subNo,"date",dates,"emails","please wait","Loading");
 
             }
         });

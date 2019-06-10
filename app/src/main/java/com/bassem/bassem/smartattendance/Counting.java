@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,8 @@ public class Counting extends AppCompatActivity   {
     EditText textday, textmonth, textyear;
     TextView textView;
     private static DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+    Spinner spinner;
+    String subject,subNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +41,34 @@ public class Counting extends AppCompatActivity   {
         textmonth = findViewById(R.id.Month1);
         textyear = findViewById(R.id.Year1);
         textView=findViewById(R.id.theno);
+        spinner=findViewById(R.id.spinCounting);
+
 
 
 
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                subject=spinner.getSelectedItem().toString();
+
+                switch (subject)
+                {
+                    case "Security":
+                        subNo="0";
+                        break;
+
+                    case "Neural":
+                        subNo="1";
+                        break;
+
+
+
+                    case "Theory":
+
+                        subNo="2";
+                        break;
+                }
                 String d, m, y;
                 d = textday.getText().toString();
                 m = textmonth.getText().toString();
@@ -51,7 +76,7 @@ public class Counting extends AppCompatActivity   {
 
                 String dates = d + "-" + m + "-" + y;
                 mDatabase = FirebaseDatabase.getInstance().getReference();
-                mDatabase.child("Subject").child("0").child("date").child(dates).child("emails").addListenerForSingleValueEvent(new ValueEventListener() {
+                mDatabase.child("Subject").child(subNo).child("date").child(dates).child("emails").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

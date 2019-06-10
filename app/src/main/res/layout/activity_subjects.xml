@@ -7,6 +7,18 @@
     android:background="@color/colorwhite"
     tools:context=".ShowallData">
 
+   <Spinner
+       android:id="@+id/spinAllData"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+
+       android:layout_marginBottom="51dp"
+       android:entries="@array/subjects"
+       app:layout_constraintBottom_toTopOf="@+id/Day"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
 
    <Button
        android:id="@+id/Showing"
@@ -26,18 +38,18 @@
        android:id="@+id/Day"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginBottom="145dp"
+       android:layout_marginBottom="455dp"
        android:layout_marginTop="91dp"
 
        android:clickable="false"
        android:hint="enter the day"
        android:inputType="none|number"
        android:textColorHint="@android:color/background_dark"
-       app:layout_constraintBottom_toTopOf="@+id/Showing"
+       app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toStartOf="@+id/Month"
        app:layout_constraintHorizontal_chainStyle="spread_inside"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent" />
+       app:layout_constraintTop_toBottomOf="@+id/spinAllData" />
 
    <EditText
        android:id="@+id/Month"

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,8 @@ TextView bassem;
 Button show;
 String r;
 EditText textday,textmonth,textyear;
+    Spinner spinner;
+    String subject,subNo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,7 @@ EditText textday,textmonth,textyear;
         textday=findViewById(R.id.textDay);
         textmonth=findViewById(R.id.textMonth);
         textyear=findViewById(R.id.textYear);
+        spinner=findViewById(R.id.spinStudent);
 
 
 
@@ -51,6 +55,25 @@ EditText textday,textmonth,textyear;
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                subject=spinner.getSelectedItem().toString();
+
+                switch (subject)
+                {
+                    case "Security":
+                        subNo="0";
+                        break;
+
+                    case "Neural":
+                        subNo="1";
+                        break;
+
+
+
+                    case "Theory":
+
+                        subNo="2";
+                        break;
+                }
                 String d,m,y;
                 d=textday.getText().toString();
                 m=textmonth.getText().toString();
@@ -64,7 +87,7 @@ EditText textday,textmonth,textyear;
                         String name = currentSharedPreferences.getString("name", "");
                         HelperMethods.currentSubject.setEmail(name);
 
-                        HelperMethods.getData(showStudent.this, "Subject", "0", "date", dates, "emails", "plz wait", "Loading");
+                        HelperMethods.getData(showStudent.this, subNo, "0", "date", dates, "emails", "plz wait", "Loading");
 
 
                         Toast.makeText(showStudent.this, dates, Toast.LENGTH_SHORT).show();
