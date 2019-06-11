@@ -1,9 +1,12 @@
 package com.bassem.bassem.smartattendance;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import android.content.SharedPreferences;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -13,11 +16,17 @@ import android.widget.Toast;
 
 import com.bassem.bassem.smartattendance.Model.AddInterface;
 
+import com.firebase.geofire.core.GeoHashQuery;
+import com.github.kmenager.materialanimatedswitch.Utils;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.net.NetworkInterface;
+import java.util.Collections;
+import java.util.List;
 
 
 public class Registeration extends Activity implements AddInterface {
@@ -42,9 +51,38 @@ public class Registeration extends Activity implements AddInterface {
         register = findViewById(R.id.btnRegister);
 
 
+
+
+
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
+                    List<NetworkInterface> all = Collections.list(NetworkInterface.getNetworkInterfaces());
+                    for (NetworkInterface nif : all) {
+                        if (!nif.getName().equalsIgnoreCase("wlan0")) continue;
+
+                        byte[] macBytes = nif.getHardwareAddress();
+                        if (macBytes == null) {
+                        }
+
+                        StringBuilder res1 = new StringBuilder();
+                        for (byte b : macBytes) {
+                            // res1.append(Integer.toHexString(b & 0xFF) + ":");
+                            res1.append(String.format("%02X:",b));
+                            HelperMethods.currentUser.setMacAddress(res1.toString());
+                        }
+
+                        if (res1.length() > 0) {
+                            res1.deleteCharAt(res1.length() - 1);
+                        }
+                        res1.toString();
+                    }
+                } catch (Exception ex) {
+                    //handle exception
+                }
+
                 if (checkIfAllMandatoryFieldsEntered()) {
                     String a=name.getText().toString();
                     String b=phone.getText().toString();

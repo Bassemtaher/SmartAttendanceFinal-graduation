@@ -8,7 +8,7 @@ import java.util.Map;
  */
 
 public class Student implements ModelInterface{
-    private String email,password,name,phone,type;
+    private String email,password,name,phone,type,macAddress;
 
     public Student() {
 
@@ -22,6 +22,14 @@ public class Student implements ModelInterface{
     }
 
     public String getType() {return type;}
+
+    public String getMacAddress() {
+        return macAddress;
+    }
+
+    public void setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+    }
 
     public void setType(String type) {
         this.type = type;
@@ -69,6 +77,7 @@ public class Student implements ModelInterface{
         result.put("name",name);
         result.put("phone",phone);
         result.put("type",type);
+        result.put("macAddress",macAddress);
 
         return result;
     }
