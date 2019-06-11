@@ -61,7 +61,9 @@ GridView gridView;
 
                 String d,m,y;
                 d=textday.getText().toString();
+                if(Integer.parseInt(d)<10){d="0"+d;}
                 m=textmonth.getText().toString();
+                if(Integer.parseInt(m)<10) {m="0"+m;}
                 y=textyear.getText().toString();
                 String dates=d+"-"+m+"-"+y;
 

@@ -75,8 +75,11 @@ EditText textday,textmonth,textyear;
                         break;
                 }
                 String d,m,y;
+
                 d=textday.getText().toString();
+                if(Integer.parseInt(d)<10){d="0"+d;}
                 m=textmonth.getText().toString();
+                if(Integer.parseInt(m)<10) {m="0"+m;}
                 y=textyear.getText().toString();
 
                     String dates=d+"-"+m+"-"+y;
@@ -87,10 +90,9 @@ EditText textday,textmonth,textyear;
                         String name = currentSharedPreferences.getString("name", "");
                         HelperMethods.currentSubject.setEmail(name);
 
-                        HelperMethods.getData(showStudent.this, subNo, "0", "date", dates, "emails", "plz wait", "Loading");
+                        HelperMethods.getData(showStudent.this, "Subject", subNo, "date", dates, "emails", "plz wait", "Loading");
 
 
-                        Toast.makeText(showStudent.this, dates, Toast.LENGTH_SHORT).show();
 
 
             }
